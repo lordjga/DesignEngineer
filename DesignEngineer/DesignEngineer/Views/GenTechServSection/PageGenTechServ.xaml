@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styling="clr-namespace:DesignEngineer;assembly=DesignEngineer"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels"
+             x:Class="DesignEngineer.Views.GenTechServSection.PageGenTechServ"
+             Title="Общетехнические сведения" 
+             x:Name="ContentPage"  
+             Style="{DynamicResource Key=ContentPageStyle}" >
+
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+            <Grid x:Name="Grid" >
+
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+
+                <Button  x:Name="Bsi" Grid.Row="0" Grid.Column="0" 
+                         ImageSource="" 
+                         Text="Единицы измерения"  
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="1"/>
+                <Button  x:Name="BsolutionOfTriangles" Grid.Row="0" Grid.Column="1" 
+                         ImageSource=""
+                         Text="Решение треугольников" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="2"/>
+                <Button  x:Name="BTrigonometricDependencies" Grid.Row="1" Grid.Column="0" 
+                         ImageSource=""
+                         Text="Тригонометрические зависимости" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="3"/>
+                <Button  x:Name="BElementsOfStrengthOfMaterials" Grid.Row="1" Grid.Column="1" 
+                         ImageSource=""
+                         Text="Элементы сопротивления материалов" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="4"/>
+                <Button  x:Name="BFlatShapes" Grid.Row="2" Grid.Column="0" 
+                         ImageSource=""
+                         Text="Плоские фигуры" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="5"/>
+                <Button  x:Name="BSurfacesAndVolumesOfBodies" Grid.Row="2" Grid.Column="1" 
+                         ImageSource=""
+                         Text="Поверхности и объемы тел" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="6"/>
+            <Button  x:Name="BPermissibleStressesAndMechanicalPropertiesOfMaterials" Grid.Row="3" Grid.Column="0" 
+                         ImageSource=""
+                         Text="Доп-е напряжения и механические свойства материалов" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="7"/>
+                <Button  x:Name="BTheCoefficientsOfFriction" Grid.Row="3" Grid.Column="1" 
+                         ImageSource=""
+                         Text="Коэф-ты трения" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="8"/>
+                <Button  x:Name="BHardnessOfMetalsAndAlloys" Grid.Row="4" Grid.Column="0" 
+                         ImageSource=""
+                         Text="Твердость металлов и сплавов" 
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="9"/>
+
+
+
+        </Grid>
+        </ScrollView>
+</ContentPage>

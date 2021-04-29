@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.SpringsCalc.CalcOfHelicalCylSpringsPage1"
+             Title="Исходные данные"
+             Style="{DynamicResource ContentPageStyle}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="Grid" >
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                       Text="Расчёт винтовых цилиндрических пружин сжатия без предварительного напряжения из стали круглого сечения" 
+                       Style="{DynamicResource PrimaryLabel}" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Класс пружины" Style="{DynamicResource SecondaryLabel}"/>
+                <Picker Grid.Row="1" Grid.Column="2" ItemsSource="{Binding ClassNum}"
+                        SelectedItem="{Binding SelectedClassNum}" 
+                        TextColor="{DynamicResource PrimaryTextColor}"
+                        TitleColor="{DynamicResource PrimaryTextColor}" 
+                        SelectedIndex="1"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Разряд пружины" Style="{DynamicResource SecondaryLabel}"/>
+                <Picker Grid.Row="2" Grid.Column="2" ItemsSource="{Binding RankNum}"
+                        SelectedItem="{Binding SelectedRankNum}"
+                        TextColor="{DynamicResource PrimaryTextColor}"
+                        TitleColor="{DynamicResource PrimaryTextColor}"
+                        SelectedIndex="1"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Наружный диаметр пружины, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="3" Grid.Column="1" Text="D1=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="3" Grid.Column="2" Text="{Binding D1}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Отн-й инерционный зазор пружины" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="б=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="4" Grid.Column="2" Text="{Binding Delta}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Сила пружины при предварительной деформации, Н" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="5" Grid.Column="1" Text="F1=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="5" Grid.Column="2" Text="{Binding F1}"
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Сила пружины при рабочей деформации, Н" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="6" Grid.Column="1" Text="F2=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="6" Grid.Column="2" Text="{Binding F2}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Рабочий ход пружины, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="7" Grid.Column="1" Text="h=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="7" Grid.Column="2" Text="{Binding h}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="8" Grid.Column="0" Text="Допускаемое касательное напряжение пружины, МПа" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="8" Grid.Column="1" Text="[t=]" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="8" Grid.Column="2" Text="{Binding tau}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="9" Grid.Column="0" Text="Диаметр проволоки, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="9" Grid.Column="1" Text="d=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="9" Grid.Column="2" Text="{Binding d}" FontSize ="Medium"/>
+
+
+                <Label Grid.Row="10" Grid.Column="0" Text="Число рабочих витков пружины" Style="{DynamicResource SecondaryLabel}"/>
+                <Button Grid.Row="10" Grid.Column="1" Text="n=" Command="{Binding NjCommand}" />
+               <Entry Grid.Row="10" Grid.Column="2" Text="{Binding n}" FontSize ="Medium"/>
+
+                <Label Grid.Row="11" Grid.Column="0" Text="Число опорных витков (с двух сторон)" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="11" Grid.Column="1" Text="n2=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="11" Grid.Column="2" Text="{Binding n2}" 
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="12" Grid.Column="0" Text="Число обработанных витков (с двух сторон)" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="12" Grid.Column="1" Text="n3=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="12" Grid.Column="2" Text="{Binding n3}"
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="13" Grid.Column="0" Text="Наиб. ск-ть перем-я подв-го конца пружины при нагружении или разгрузке, м/с" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="13" Grid.Column="1" Text="vMax=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="13" Grid.Column="2" Text="{Binding vMax}"
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="14" Grid.Column="0" Text="Модуль сдвига, МПа" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="14" Grid.Column="1" Text="G=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="14" Grid.Column="2" Text="{Binding G}"
+                        FontSize ="Medium"/>
+
+                <Label Grid.Row="15" Grid.Column="0" Text="Динамическая (гравитационная) плотность материала, Н*с^2/м^4" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="15" Grid.Column="1" Text="ro=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Entry Grid.Row="15" Grid.Column="2" Text="{Binding Ro}"
+                       FontSize ="Medium"/>
+                <StackLayout Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Vertical">
+                    <Button Text="Сохранить исходные данные" Command="{Binding SaveCom}"/>
+                    <Button Text="Загрузить исходные данные" Command="{Binding DownCom}"/>
+                </StackLayout>
+                </Grid>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

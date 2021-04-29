@@ -1,0 +1,631 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="Content-Language" content="ru" />
+   <meta name="author" content="ArtiomLaferchuk" />
+     <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen, projection" />
+  </head>
+  
+
+   
+<body>
+
+    <div id="main">
+        <h1>Теория расчета пружин</h1>
+        <p><strong>Содержание:</strong></p>
+        <p><a href="#p1">Формулы и способы расчета пружин из стали круглого сечения по ГОСТ 13765-86 в ред. 1990г.</a></p>
+        <p><a href="#p2">Методика определения разме&shy;ров пружин по ГОСТ 13765-86.</a></p>
+        <p align="center"><strong>Пружина сжатия</strong></p>
+        <p align="center"><img src="img/CalcOfHelicalCylSprings/1.jpg" alt="рисунок" width="254px" height="183px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <p align="center"><strong>Пружина растяжения</strong></p>
+        <p align="center"><img src="img/CalcOfHelicalCylSprings/2.jpg" alt="рисунок" width="233px" height="197px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <h2 id="p1">Формулы и способы расчета пружин из стали круглого сечения по ГОСТ 13765-86 в ред. 1990г.</h2>
+        <div style="overflow-x: auto;">
+            <div align="center">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="208">
+                                <p align="center">Наименование параметра</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">Обозначение</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Расчетные формулы и значения</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center">1. Сила пружины при предварительной деформации, Н</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">F<sub>1</sub></p>
+                            </td>
+                            <td rowspan="5" width="210">
+                                <p align="center">Принимаются в зависимости от нагрузки пружины</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center">2. Сила пружины при рабочей дефор&shy;мации (соответствует наибольшему принудительному перемещению под&shy;вижного звена в механизме), Н</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">F<sub>2</sub></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center">3. Рабочий ход пружины, мм</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">h</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center">4. Наибольшая скорость перемещения подвижного конца пружины при нагружении или разгрузке, м/с</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">V<sub>max</sub></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center">5. Выносливость пружины, число цик&shy;лов до разрушения</p>
+                            </td>
+                            <td width="92">
+                                <p align="center">N<sub>F</sub></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p align="right">Продолжение табл. 10</p>
+            <div align="center">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="211">
+                                <p align="center">Наименование параметра</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">Обозначение</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Расчетные формулы и значения</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">6. Наружный диаметр пружины, мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">D<sub>1</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Предварительно назначают с учетом конструкции узла. Уточняются по таб&shy;лицам ГОСТ 13766-86-ГОСТ 13776-86</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">7. Относительный инерционный зазор пружины сжатия. Для пружин растя&shy;жения служит ограничением макси&shy;мальной деформации</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">&delta;</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">&delta; = 1-F<sub>2</sub>/F<sub>3</sub>. (1)</p>
+                                <p align="center">Для пружин сжатия классов I и II&delta;=0,05&hellip;0,25; для пружин растяжения &delta;=0,05&hellip;0,10; для одножильных пру&shy;жин класса III&delta;=0,10&hellip;0,40; для трехжильных класса III&delta;=0,15&hellip;0,40</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">8. Сила пружины при максимальной деформации, Н</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">F<sub>3</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center">F<sub>3</sub>=F<sub>2</sub>/(1-&delta;) (2)</p>
+                                <p align="center">Уточняется по таблицам ГОСТ 13766-86-ГОСТ 13776-86</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">9. Сила предварительного напряжения (при навивке из холоднотянутой и термообработанной проволоки), Н</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">F<sub>0</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center">F<sub>0</sub>= (0,1&hellip; 0,25) F<sub>3</sub></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">10. Диаметр проволоки, мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">d</p>
+                            </td>
+                            <td rowspan="3" width="210">
+                                <p align="center">Выбирается по таблицам ГОСТ 13764-86-ГОСТ 13776-86</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">11. Диаметр трехжильного троса, мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">d<sub>1</sub></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">12. Жесткость одного витка пружины, Н/мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">c<sub>1</sub></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">13. Максимальная деформация одного витка пружины, мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">s&rsquo;<sub>3</sub>&nbsp;(при F<sub>0</sub>=0) s&rdquo;<sub>3</sub>&nbsp;(при F<sub>0</sub>&gt;0)</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Выбирается по таблицам ГОСТ 13764-86-ГОСТ 13776-86</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/3.jpg" alt="формула" width="131px" height="33px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">14. Максимальное касательное напря&shy;жение пружины, Н/мм<sup>2</sup></p>
+                                <p align="center">(Коэффициент k см. п. 35)</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">&tau;<sub>3</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Назначается по табл. 2</p>
+                                <p align="center">ГОСТ 13764-86.</p>
+                                <p align="center">При проверке</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/4.jpg" alt="формула" width="121px" height="38px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                <p align="center">Для трехжильных пружин</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/5.jpg" alt="формула" width="125px" height="38px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">15. Критическая скорость пружины сжатия, м/с (Максимальная скорость подвижного звена механизма v<sub>max</sub>&nbsp;должна быть равна или меньше v<sub>K</sub>, т.е. v<sub>K</sub>&nbsp;&gt; v<sub>max</sub>)</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">v<sub>к</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/6.jpg" alt="формула" width="139px" height="60px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                <p align="center">Для трехжильных пружин</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/7.jpg" alt="формула" width="141px" height="64px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">16. Модуль сдвига, Н/мм<sup>2</sup></p>
+                            </td>
+                            <td width="88">
+                                <p align="center">G</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">Для пружинной стали G = 7,85&middot;10<sup>4</sup></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">17. Динамическая (гравитационная) плотность материала, Н&middot;с<sup>2</sup>/м<sup>4</sup></p>
+                            </td>
+                            <td width="88">
+                                <p align="center">Р</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">p = &gamma;/g,</p>
+                                <p align="center">где g-ускорение свободного падения, м/с<sup>2</sup>; &gamma; &ndash; удельный вес, Н/м<sup>3</sup>. Для пружиннойстали р = 8&middot;10<sup>3</sup></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">18. Жесткость пружины, Н/мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">с</p>
+                            </td>
+                            <td width="210">
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/8.jpg" alt="формула" width="188px" height="38px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                <p align="center">Для пружин с предварительным напря&shy;жением</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/9.jpg" alt="формула" width="132px" height="36px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                <p align="center">Для трехжильных пружин</p>
+                                <p align="center"><img src="img/CalcOfHelicalCylSprings/10.jpg" alt="формула" width="178px" height="35px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">19. Число рабочих витков пружины</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">n</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">n = c<sub>1</sub>/c (7)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">20. Полное число витков пружины</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">n<sub>1</sub></p>
+                            </td>
+                            <td width="210">
+                                <p align="center">n<sub>1</sub>&nbsp;= n+ n<sub>2</sub>, (8)</p>
+                                <p align="center">где n<sub>2</sub>&nbsp;&ndash; число опорных витков</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">21. Средний диаметр пружины, мм</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">D</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">D = D<sub>1</sub>&nbsp;&ndash; d = D<sub>2</sub>&nbsp;+ d</p>
+                                <p align="center">Для трехжильных пружин</p>
+                                <p align="center">D = D<sub>1</sub>&ndash; d<sub>1</sub>= D<sub>2</sub>+ d<sub>1</sub>(9a)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="211">
+                                <p align="center">22. Индекс пружины</p>
+                            </td>
+                            <td width="88">
+                                <p align="center">i</p>
+                            </td>
+                            <td width="210">
+                                <p align="center">i = D/d (10)</p>
+                                <p align="center">Для трехжильных пружин</p>
+                                <p align="center">i= D/d<sub>1</sub>&nbsp;(10а)</p>
+                                <p align="center">Рекомендуется назначать от 4 до 12</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p align="right">Продолжение табл. 10</p>
+                <div align="center">
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">Наименование параметра</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">Обозначение</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">Расчетные формулы и значения</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" width="209">
+                                    <p align="center">23. Коэффициент расплющивания троса в трехжильной пружине, учиты&shy;вающий увеличение сечения витка вдоль оси пружины после навивки</p>
+                                </td>
+                                <td rowspan="3" width="79">
+                                    <p align="center">&Delta;</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">Для трехжильного троса с углом свивки&beta;=24&deg; определяется по таблице, приведенной ниже</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="30">
+                                    <p align="center">i</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">40</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">45</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">50</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">55</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">60</p>
+                                </td>
+                                <td width="37">
+                                    <p align="center">7,0 и</p>
+                                    <p align="center">более</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="30">
+                                    <p align="center">&Delta;</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">1,029</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">1,021</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">1,015</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">1,010</p>
+                                </td>
+                                <td width="35">
+                                    <p align="center">1,005</p>
+                                </td>
+                                <td width="37">
+                                    <p align="center">1,000</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">24. Предварительная деформация пружины, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">s<sub>1</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">s<sub>1</sub>=F<sub>1</sub>/c (11)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">25. Рабочая деформация пружины, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">s<sub>2</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">s<sub>2</sub>= F<sub>2</sub>/c (12)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">26. Максимальная деформация пру&shy;жины, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">s<sub>3</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">s<sub>3</sub>= F<sub>3</sub>/c (13)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">27. Длина пружины при максималь&shy;ной деформации, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">l<sub>3</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">l<sub>3</sub>&nbsp;= (n<sub>1</sub>&nbsp;+ 1 &ndash; n<sub>3</sub>)d, (14)</p>
+                                    <p align="center">где n<sub>3</sub>&nbsp;&ndash; число обработанных витков.</p>
+                                    <p align="center">Для трехжильных пружин</p>
+                                    <p align="center">l<sub>3</sub>&nbsp;= (n + l)d<sub>1</sub>&Delta;. (14а)</p>
+                                    <p align="center">Для пружин растяжения с зацепами</p>
+                                    <p align="center">l<sub>3</sub>&nbsp;= l<sub>0</sub>&nbsp;+ s<sub>3</sub></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">28. Длина пружины в свободном со&shy;стоянии, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">l<sub>0</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">l<sub>0</sub>=l<sub>3</sub>+s<sub>3</sub>&nbsp;(15)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">29. Длина пружины растяжения без зацепов в свободном состоянии, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">l<sub>0</sub>&lsquo;</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">l<sub>0</sub>&lsquo; = (n<sub>1</sub>+1)d (15а)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">30. Длина пружины при предварительной деформации, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">1<sub>l</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">l<sub>1</sub>&nbsp;= l<sub>0</sub>-s<sub>1</sub>. (16)</p>
+                                    <p align="center">Для пружин растяжения</p>
+                                    <p align="center">l<sub>1</sub>= l<sub>0</sub>+s<sub>1</sub>(16а)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">31. Длина пружины при рабочей де&shy;формации, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">l<sub>2</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">l<sub>2</sub>=l<sub>0</sub>-s<sub>2</sub>. (17)</p>
+                                    <p align="center">Для пружин растяжения</p>
+                                    <p align="center">l<sub>2</sub>=l<sub>0</sub>+s<sub>2</sub>&nbsp;(17а)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">32. Шаг пружины в свободном состоянии, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">t</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">t = s&rsquo;<sub>3</sub>+d. (18)</p>
+                                    <p align="center">Для трехжильных пружин t = s&rsquo;<sub>3</sub>+d<sub>1</sub>&Delta;. (18а)</p>
+                                    <p align="center">Для пружин растяжения t = d(18б)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">33. Напряжение в пружине при пред&shy;варительной деформации, Н/мм<sup>2</sup></p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">&tau;<sub>1</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/11.jpg" alt="формула" width="131px" height="37px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">34. Напряжение в пружине при рабо&shy;чей деформации, Н/мм<sup>2</sup></p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">&tau;<sub>2</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/12.jpg" alt="формула" width="133px" height="34px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">35. Коэффициент, учитывающий кри&shy;визну витка пружины</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">k</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/13.jpg" alt="формула" width="152px" height="35px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                    <p align="center">Для трехжильных пружин</p>
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/14.jpg" alt="формула" width="213px" height="77px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">36. Длина развернутой пружины (для пружин растяжения без зацепов), мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">l</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/15.jpg" alt="формула" width="141px" height="20px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">37. Масса пружины (для пружин рас&shy;тяжения без зацепов), кг</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">m</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/16.jpg" alt="формула" width="160px" height="20px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">38. Объем, занимаемый пружиной (без учета зацепов пружины), мм3</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">V</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/17.jpg" alt="формула" width="150px" height="19px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">39. Зазор между концом опорного вит&shy;ка и соседним рабочим витком пру&shy;жины сжатия, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">&lambda;</p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">Устанавливается в зависимости от формы опорного витка</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">40. Внутренний диаметр пружины, мм</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">D<sub>2</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">D<sub>2</sub>=D<sub>1</sub>-2d (25)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">41. Временное сопротивление прово&shy;локи при растяжении, Н/мм<sup>2</sup></p>
+                                </td>
+                                <td width="79">
+                                    <p align="center">R<sub>m</sub></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">Устанавливается при испытаниях проволоки или по ГОСТ 9389-75 и ГОСТ 1071-81</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="209">
+                                    <p align="center">42. Максимальная энергия, накапли&shy;ваемая пружиной, или работа дефор&shy;мации, МДж</p>
+                                </td>
+                                <td width="79">
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/18.jpg" alt="" width="17px" height="18px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                                <td colspan="7" width="244">
+                                    <p align="center">Для пружин сжатия и растяжения без предварительного напряжения</p>
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/19.jpg" alt="формула" width="139px" height="32px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                    <p align="center">для пружин растяжения с предварительным напряжением</p>
+                                    <p align="center"><img src="img/CalcOfHelicalCylSprings/20.jpg" alt="формула" width="159px" height="34px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h2 id="p2">Методика определения разме&shy;ров пружин по ГОСТ 13765-86.</h2>
+        <p align="justify">1. Исходными величинами для определения размеров пружин являются силы F<sub>1</sub>&nbsp;и F<sub>2</sub>, ра&shy;бочий ход h, наибольшая скорость перемеще&shy;ния подвижного конца пружины при нагружении или при разгрузке v<sub>m</sub><sub>ах</sub>, выносливость N<sub>F</sub>&nbsp;и наружный диаметр пружины D<sub>1</sub>&nbsp;(пред&shy;варительный).</p>
+        <p align="justify">Если задана только одна сила F<sub>2</sub>, то вместо рабочего хода h для подсчета берут величину рабочей деформации s<sub>2</sub>, соответствующую заданной силе.</p>
+        <p align="justify">2. По величине заданной выносливости N<sub>F</sub>&nbsp;предварительно определяют принадлежность пружины к соответствующему классу по табл. 1.</p>
+        <p align="justify">3. По заданной силе F<sub>2</sub>&nbsp;и крайним значени&shy;ям инерционного зазора &delta; вычисляют по фор&shy;муле (2) значение силы F<sub>3</sub>.</p>
+        <p align="justify">4. По значению F<sub>3</sub>, пользуясь табл. 2, пред&shy;варительно определяют разряд пружины.</p>
+        <p align="justify">5. По табл. 11-17 находят строку, в кото&shy;рой наружный диаметр витка пружины наибо&shy;лее близок к предварительно заданному значе&shy;нию D<sub>1</sub>. В этой же строке находят соответствующие значения силы F<sub>3</sub>&nbsp;и диаметра прово&shy;локи d.</p>
+        <p align="justify">6. Для пружин из закаливаемых марок ста&shy;лей максимальное касательное напряжение &tau;<sub>3</sub>&nbsp;находят по табл. 2, для пружин из холоднотя&shy;нутой и термообработанной &tau;<sub>3</sub>&nbsp;вычисляют с</p>
+        <p align="justify">учетом значений временного сопротивления R<sub>m</sub>. Для холоднотянутой проволоки R<sub>m</sub>&nbsp;опре&shy;деляют из ГОСТ 9389-75, для термообрабо&shy;танной &ndash; из ГОСТ 1071-81.</p>
+        <p align="justify">7. По полученным значениям F<sub>3</sub>&nbsp;и &tau;<sub>3</sub>, aтакже по заданному значению F<sub>2</sub>&nbsp;по формулам (5) и (5а) вычисляют критическую скорость v<sub>K</sub>&nbsp;и отношение v<sub>max</sub>/v<sub>K</sub>, подтверждающее или</p>
+        <p align="justify">отрицающее принадлежность пружины к предварительно установленному классу.</p>
+        <p align="justify">При несоблюдении условий v<sub>max</sub>/v<sub>K</sub>&lt;1 пружины I и II классов относят к последую&shy;щему классу или повторяют расчеты, изменив исходные условия. Если невозможно измене&shy;ние исходных условий, работоспособность обеспечивается комплектом запасных пружин.</p>
+        <p align="justify">8. По окончательно установленному классу и разряду в соответствующей таблице на па&shy;раметры витков пружин, помимо ранее най&shy;денных величин F<sub>3</sub>, D<sub>1</sub>, и d, находят величины c<sub>1</sub>&nbsp;и s<sub>3</sub>, после чего остальные размеры пружины и габариты узла вычисляют по формулам (6)&hellip; (25).</p>
+
+
+
+
+    </div>
+
+
+
+</body>
+

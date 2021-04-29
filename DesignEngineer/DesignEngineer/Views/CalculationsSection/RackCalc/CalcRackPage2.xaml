@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.RackCalc.CalcRackPage2"
+             Title="Результаты"
+             Style="{DynamicResource ContentPageStyle}">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="Grid" >
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                       Text="Расчёт реек" 
+                       Style="{DynamicResource PrimaryLabel}" />
+                <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Расчет" Command="{Binding Calc}" />
+                <Button Grid.Row="1" Grid.Column="2" Text="Отчет" Command="{Binding ReportCommand}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Модуль основной (торцовый), мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="mt=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="2" Grid.Column="2" Text="{Binding Mt}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Шаг нормальный, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="3" Grid.Column="1" Text="pn=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="3" Grid.Column="2" Text="{Binding Pn}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Шаг торцовый, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="pt=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="4" Grid.Column="2" Text="{Binding Pt}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Высота головки зуба, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="5" Grid.Column="1" Text="ha=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="5" Grid.Column="2" Text="{Binding Ha}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Высота зуба, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="6" Grid.Column="1" Text="h=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="6" Grid.Column="2" Text="{Binding H}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Ширина рейки, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="7" Grid.Column="1" Text="b=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="7" Grid.Column="2" Text="{Binding B}" Style="{DynamicResource SecondaryLabel}"/>
+
+                <Label Grid.Row="8" Grid.Column="0" Text="Длина косого зуба, мм" Style="{DynamicResource SecondaryLabel}"/>
+                <Label Grid.Row="8" Grid.Column="1" Text="b1=" Style="{DynamicResource SecondaryLabel}" HorizontalTextAlignment="End"/>
+                <Label Grid.Row="8" Grid.Column="2" Text="{Binding B1}" Style="{DynamicResource SecondaryLabel}"/>
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.SurfaceRoughnessSection.PageSurfaceRoughness"
+             Title ="Шероховатость поверхности" 
+             Style="{DynamicResource Key=ContentPageStyle}" >
+
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <Grid x:Name="Grid" >
+
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
+
+            <Button  x:Name="BBasicRoughnessParametersAndTheirDesignations" Grid.Row="0" Grid.Column="0" 
+                         ImageSource="" 
+                         Text="Основные параметры шероховатости и их обозначения"  
+                         Command="{Binding BToWebViewOnClicked}"
+                         CommandParameter="10"/>
+            <Button  x:Name="BControlTheRoughnessAndTheSurface" Grid.Row="0" Grid.Column="1" 
+                     ImageSource="" 
+                     Text="Контроль шероховатости и поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="11"/>
+            <Button  x:Name="BSignsOfRoughnessOfTheSurfaces" Grid.Row="1" Grid.Column="0" 
+                     ImageSource="" 
+                     Text="ГОСТ 2.309-73 ЕСКД. Обозначения шероховатости поверхностей"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="12"/>
+            <Button  x:Name="BMatingSurfaces" Grid.Row="1" Grid.Column="1" 
+                     ImageSource="" 
+                     Text="Сопрягаемые поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="13"/>
+            <Button  x:Name="BScrapedSurfaces" Grid.Row="2" Grid.Column="0" 
+                     ImageSource="" 
+                     Text="Шабреные поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="14"/>
+            <Button  x:Name="BFitSurface" Grid.Row="2" Grid.Column="1" 
+                     ImageSource="" 
+                     Text="Пригоняемые поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="15"/>
+            <Button  x:Name="BFreeSurfaces" Grid.Row="3" Grid.Column="0" 
+                     ImageSource="" 
+                     Text="Свободные поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="16"/>
+
+            <Button  x:Name="BTupicalSurface" Grid.Row="3" Grid.Column="1" 
+                     ImageSource="" 
+                     Text="Типовые поверхности"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="17"/>
+
+            <Button  x:Name="BSurfacesDependingOnTheProcessingMethods" Grid.Row="4" Grid.Column="0" 
+                     ImageSource="" 
+                     Text="Поверхности в зависимости от методов обработки"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="18"/>
+            <Button  x:Name="BSurfacesOfHolesAndShafts" Grid.Row="4" Grid.Column="1" 
+                     ImageSource="" 
+                     Text="Поверхности отверстий и валов в системе отверстия и вала"  
+                     Command="{Binding BToWebViewOnClicked}"
+                     CommandParameter="19"/>
+
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

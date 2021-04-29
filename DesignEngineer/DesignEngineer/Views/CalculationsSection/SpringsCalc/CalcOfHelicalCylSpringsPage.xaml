@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:springsCalc="clr-namespace:DesignEngineer.Views.CalculationsSection.SpringsCalc;assembly=DesignEngineer"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.SpringsCalc.CalcOfHelicalCylSpringsPage"
+             Title ="Расчет винтовых цилиндрических пружин"
+             Style="{DynamicResource TabbedPageStyle}">
+    
+    <TabbedPage.BindingContext>
+        <viewModels:HelicalCylSpringsViewModel/>
+    </TabbedPage.BindingContext>
+    <TabbedPage.Resources>
+        <ResourceDictionary/>
+    </TabbedPage.Resources>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="Item1" Order="Primary"  IconImageSource="{DynamicResource IconImageSourceBookmark}" Priority="0" 
+                     Command="{Binding AddBookmark}"/>
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <springsCalc:CalcOfHelicalCylSpringsPage1 >
+        </springsCalc:CalcOfHelicalCylSpringsPage1 >
+        <springsCalc:CalcOfHelicalCylSpringsPage2 >
+        </springsCalc:CalcOfHelicalCylSpringsPage2 >
+        <springsCalc:CalcOfHelicalCylSpringsPage3 >
+        </springsCalc:CalcOfHelicalCylSpringsPage3>
+    </TabbedPage.Children>
+
+</TabbedPage>

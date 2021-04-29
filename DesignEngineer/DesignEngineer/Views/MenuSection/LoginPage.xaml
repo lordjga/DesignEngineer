@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.MenuSection.LoginPage"
+             Title ="Авторизация" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout >
+        <StackLayout.BindingContext>
+            <viewModels:UserPageViewModel/>
+        </StackLayout.BindingContext>
+        <Grid x:Name="Grid" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.25*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Авторизация:" 
+                   Style="{DynamicResource PrimaryLabel}"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="логин" 
+                   Style="{DynamicResource SecondaryLabel}"/>
+            <Entry Grid.Row="2" Grid.Column="0" Text="{Binding Login}"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding LoginProv}" 
+                   Style="{DynamicResource SecondaryLabel}"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="пароль" 
+                   Style="{DynamicResource SecondaryLabel}" />
+            <Entry Grid.Row="4" Grid.Column="0" Text="{Binding Password}"/>
+            <Label Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Text="{Binding PassProv}" 
+                   Style="{DynamicResource SecondaryLabel}"/>
+            <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Navigation="{Binding Navigation}">
+                <Button Text="Войти"  Command="{Binding LoginCommand}"/>
+                <Button Text="Отмена" Command="{Binding CancelCommand}"/>
+                <Button Text="Регистрация" Command="{Binding RegCommand}"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

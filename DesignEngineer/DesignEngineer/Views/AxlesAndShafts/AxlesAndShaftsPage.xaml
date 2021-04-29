@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.AxlesAndShafts.AxlesAndShaftsPage"
+             Title ="Оси и валы" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <Grid x:Name="Grid" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Оси" Style="{DynamicResource PrimaryLabel}"/>
+            <Button   Grid.Row="1" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="20"
+                     Text="Типы конструкции и размеры"/>
+            <Button   Grid.Row="1" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="21"
+                     Text="Теор. расчет осей"/>
+            
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Валы" Style="{DynamicResource PrimaryLabel}"/>
+            <Button   Grid.Row="3" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="22"
+                     Text="Цилиндрические и конические концы валов"/>
+            <Button  Grid.Row="3" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="23"
+                     Text="Конструкция валов"/>
+            <Button   Grid.Row="3" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="24"
+                     Text="Теор. расчет на жесткость"/>
+            <Button   Grid.Row="4" Grid.Column="0" 
+                      ImageSource=""
+                      Command="{Binding BToWebViewOnClicked}" CommandParameter="25"
+                      Text="Теор. расчет на прочность"/>
+            <Button  Grid.Row="4" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="26"
+                     Text="Вращающий момент"/>
+            <Button   Grid.Row="4" Grid.Column="2" 
+                      ImageSource=""
+                      Command="{Binding BToWebViewOnClicked}" CommandParameter="27"
+                      Text="Нагрузки на вал"/>
+            <Button   Grid.Row="5" Grid.Column="0" 
+                      ImageSource=""
+                      Command="{Binding BToWebViewOnClicked}" CommandParameter="28"
+                      Text="Реакции опор и изгиб-х моментов"/>
+            <Button  Grid.Row="5" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToWebViewOnClicked}" CommandParameter="29"
+                     Text="Пример расчета вала"/>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

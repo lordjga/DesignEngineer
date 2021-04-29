@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.ConverterCalc"
+             Title="Конвертеры"
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.4*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" Text="Длина" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="LengthCalc"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Масса" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Объём" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Скорость" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="Площадь" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="Температура" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="6" Grid.Column="1" Text="Угол" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="7" Grid.Column="1" Text="Энергия" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="8" Grid.Column="1" Text="Давление" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+            <Button Grid.Row="9" Grid.Column="1" Text="Мощность" FontSize="Title" 
+                    Command="{Binding BToPagesOnClicked}"
+                    CommandParameter="Alarm"/>
+        </Grid>
+        
+    </ScrollView>
+
+
+</ContentPage>

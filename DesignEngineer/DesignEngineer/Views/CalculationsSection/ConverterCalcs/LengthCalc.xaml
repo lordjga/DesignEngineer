@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.ConverterCalcs.LengthCalc"
+             Title ="Конвертер длин" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <StackLayout.BindingContext>
+            <viewModels:ConverterViewModel/>
+        </StackLayout.BindingContext>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Метр" Style="{DynamicResource PrimaryLabel}" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Фут" Style="{DynamicResource PrimaryLabel}"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Ярд" Style="{DynamicResource PrimaryLabel}"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Дюйм" Style="{DynamicResource PrimaryLabel}"/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Морск. миля" Style="{DynamicResource PrimaryLabel}"/>
+            <Label Grid.Row="5" Grid.Column="0" Text="Миля" Style="{DynamicResource PrimaryLabel}" />
+            <Entry Grid.Row="0" Grid.Column="1" 
+                   Text="{Binding Metr}" />
+            <Entry Grid.Row="1" Grid.Column="1" 
+                   Text="{Binding Foot}" />
+            <Entry Grid.Row="2" Grid.Column="1" 
+                   Text="{Binding Yard}"/>
+            <Entry Grid.Row="3" Grid.Column="1" 
+                   Text="{Binding Inch}"/>
+            <Entry Grid.Row="4" Grid.Column="1" 
+                   Text="{Binding SeaMile}"/>
+            <Entry Grid.Row="5" Grid.Column="1" 
+                   Text="{Binding LandMile}" />
+
+
+        </Grid>
+
+    </StackLayout>
+
+
+</ContentPage>

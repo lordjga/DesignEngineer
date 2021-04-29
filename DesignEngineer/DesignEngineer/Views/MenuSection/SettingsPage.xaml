@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             xmlns:themes="clr-namespace:DesignEngineer.Themes;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.MenuSection.SettingsPage"
+             Title ="Настройки" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Сменить профиль" Priority="0" 
+                      Command="{Binding BChangeAccClicked}" CommandParameter="Change"/>
+        <ToolbarItem  Order="Secondary"  Text="Выйти из профиля" Priority="1" 
+                      Command="{Binding BChangeAccClicked}" CommandParameter="Exit"/>
+        <ToolbarItem  Order="Secondary"  Text="Удалить профиль" Priority="2" 
+                      Command="{Binding BChangeAccClicked}" CommandParameter="Delete"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid x:Name="Grid" >
+            <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <themes:EnumPicker
+            Grid.Row="1" Grid.Column="0" EnumType="{x:Type themes:Theme}"
+                          Title="Select Theme"
+                          SelectedItem="{}"
+                          SelectedIndexChanged="OnPickerSelectionChanged" 
+            TextColor="{DynamicResource PrimaryTextColor}"
+                         />
+        <Label Grid.Row="1" Grid.Column="1" x:Name="statusLabel"
+               HorizontalOptions="Center" Style="{DynamicResource SecondaryLabel}" />
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="login"
+               HorizontalOptions="Center" Style="{DynamicResource PrimaryLabel}" />
+    </Grid>
+
+</ContentPage>

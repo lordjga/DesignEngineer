@@ -1,0 +1,739 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="Content-Language" content="ru" />
+   <meta name="author" content="ArtiomLaferchuk" />
+     <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen, projection" />
+  </head>
+  
+
+   
+<body>
+
+    <div id="main">
+        <h1>Пример расчета</h1>
+        <p><strong>Содержание:</strong></p>
+        <p><a href="#p1">11. Решение примера</a></p>
+        <p><a href="#p2">12. Сравнение сплошных и полых валов различного сечения по наружному диаметру (d, d1), моменту инерции (J, J1), моменту сопротивления (W, W1) и массе</a></p>
+        <p align="justify"><strong>Принятые обозначения:</strong></p>
+        <p align="justify">&eta; &ndash; КПД рассчитываемого участка пере&shy;дачи; i &ndash; передаточное отношение частоты вращения выходного вала к рассчитывае&shy;мому; Т &ndash; вращающий момент рассчиты&shy;ваемого вала, Н&middot;мм; Т<sub>в</sub>&nbsp;&ndash; вращающий момент выходного вала, Н&middot;мм; &beta; &ndash; угол между направлением действия силы и осью х; ос&shy;тальные обозначения указаны в решении примера.</p>
+        <p align="justify"><strong>Дано:</strong>&nbsp;вращающий момент на выход&shy;ном валу Т<sub>в</sub>&nbsp;= 162000 Н&middot;мм.</p>
+        <p align="justify">Найти диаметр промежуточного вала для участка передачи, схема которого изо&shy;бражена на рис. 13.</p>
+        <p align="center"><img src="img/ExampleOfCalcOfTheShaft/1.jpg" alt="рисунок" width="332px" height="192px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <p align="center"><strong>Рис. 13. Схема передачи к примеру для расчета</strong></p>
+        <p align="justify">Решение примера приведено в табл. 11.</p>
+        <p align="center"><img src="img/ExampleOfCalcOfTheShaft/2.jpg" alt="рисунок" width="333px" height="349px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <p align="center"><strong>Рис. 14</strong></p>
+        <p align="center"><img src="img/ExampleOfCalcOfTheShaft/3.jpg" alt="рисунок" width="333px" height="163px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <p align="center"><strong>Рис. 15</strong></p>
+        <h2 id="p1">11. Решение примера</h2>
+        <div style="overflow-x: auto;">
+            <div align="center">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Определяемое</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">Расчетная формула</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">Расчет</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Вращающий момент с учетом ц</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">T = T<sub>в</sub>i<sub>1</sub>/&eta;</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">&eta; = 0,96;</p>
+                                <p align="center">T =162000&middot;1 / 0,96 =1б9000Н&middot;мм</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Окружная сила</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">P = 2T/D</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">P<sub>1</sub>&nbsp;= 2&middot;169000 / 75 =4,50кН;</p>
+                                <p align="center">P<sub>3&nbsp;</sub>= 2&middot;169000 / 104 = 3,25 кН</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Силы, действующие на вал и подшипники</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">Q &asymp; 1,1Р</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">Q<sub>1</sub>&nbsp;= 1,1 &middot; 4,50 = 4,95кН;</p>
+                                <p align="center">Q<sub>3</sub>&nbsp;= 1,1 &middot; 3,25 = 3,58кН</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="125">
+                                <p align="center">Реакция опоры в плоскости х и ус учетом зна&shy;ка (рис.14)</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Опора А</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/4.jpg" alt="формула" width="162px" height="40px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/5.jpg" alt="формула" width="172px" height="91px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" width="125">
+                                <p align="center">Реакция опоры в плоскости х и ус учетом зна&shy;ка (рис.14)</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Опора А</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/6.jpg" alt="формула" width="112px" height="40px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/7.jpg" alt="формула" width="174px" height="73px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" width="123">
+                                <p align="center">Опора В</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/8.jpg" alt="формула" width="162px" height="41px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/9.jpg" alt="формула" width="174px" height="90px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/10.jpg" alt="формула" width="109px" height="43px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/11.jpg" alt="формула" width="172px" height="68px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" width="125">
+                                <p align="center">Полная реак&shy;ция</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Опора А</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/12.jpg" alt="формула" width="109px" height="36px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/13.jpg" alt="формула" width="147px" height="61px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="123">
+                                <p align="center">Опора В</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/14.jpg" alt="формула" width="105px" height="36px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/15.jpg" alt="формула" width="151px" height="61px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" width="125">
+                                <p align="center">Изгибающий момент в опасном сече&shy;нии (рис.14)</p>
+                                <p align="center">&nbsp;</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Плоскости х, у</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">См. эпюры (рис. 14)</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">Опасное сечение в опоре В</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="123">
+                                <p align="center">Суммарный</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/16.jpg" alt="формула" width="147px" height="37px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center">М<sub>и</sub>&nbsp;= М<sub>их</sub>&nbsp;= 161000 Н &middot; мм</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Отношение Т/М<sub>и</sub>&nbsp;в опасном сечении</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">T/М<sub>и</sub></p>
+                            </td>
+                            <td width="248">
+                                <p align="center">169000 / 161000 = 1,05</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Диаметр вала (по М<sub>и</sub>, Н&middot;м, и Т/М<sub>и</sub>)</p>
+                            </td>
+                            <td width="208">
+                                <p align="center">По табл. 10</p>
+                            </td>
+                            <td width="248">
+                                <p align="center">d = 30мм</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="125">
+                                <p align="center">Угол наклона упругой линии в расчетном сечении в плоскости х</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Отдельно от каждой силы</p>
+                            </td>
+                            <td width="208">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/17.jpg" alt="формула" width="140px" height="76px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="248">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/18.jpg" alt="формула" width="150px" height="128px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p align="right">Продолжение табл. 11</p>
+            <div align="center">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Определяемое</p>
+                            </td>
+                            <td width="207">
+                                <p align="center">Расчетная формула</p>
+                            </td>
+                            <td width="247">
+                                <p align="center">Расчет</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="125">&nbsp;</td>
+                            <td width="123">
+                                <p align="center">Суммарный</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/19.jpg" alt="формула" width="91px" height="34px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center">&theta;<sub>х</sub>&nbsp;= 0,00068 + 0,00018 = 0,00086рад</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Угол наклона упругой линии в расчетном сечении в плоскости у (рис. 15)</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/20.jpg" alt="формула" width="138px" height="94px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/21.jpg" alt="формула" width="182px" height="105px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Угол наклона упругой линии в расчетном сечении</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/22.jpg" alt="формула" width="99px" height="36px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/23.jpg" alt="формула" width="158px" height="59px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" width="125">
+                                <p align="center">Прогиб в рас&shy;четном сечении в плоскости х</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">Отдельно от каждой силы</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/24.jpg" alt="формула" width="133px" height="78px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/25.jpg" alt="формула" width="160px" height="132px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="123">
+                                <p align="center">Суммарный</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/26.jpg" alt="формула" width="87px" height="35px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center">у<sub>х</sub>&nbsp;= 0,0045 + 0,0008 = 0,0053см</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="2" width="248">
+                                <p align="center">То же, в плоскости у (рис. 15)</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/27.jpg" alt="формула" width="134px" height="53px" align="middle" border="0px" hspace="0" vspace="0" />/p&gt;</p>
+                            </td>
+                            <td width="247">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/28.jpg" alt="формула" width="93px" height="36px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/29.jpg" alt="формула" width="166px" height="52px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" width="248">
+                                <p align="center">Прогиб в расчетном сечении</p>
+                            </td>
+                            <td width="207">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/30.jpg" alt="формула" width="103px" height="39px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                            <td width="247">
+                                <p align="center"><img src="img/ExampleOfCalcOfTheShaft/31.jpg" alt="формула" width="157px" height="68px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" width="125">
+                                <p align="center">Допустимые величины</p>
+                            </td>
+                            <td width="123">
+                                <p align="center">&theta; в опоре</p>
+                            </td>
+                            <td width="207">
+                                <p align="center">0,001</p>
+                            </td>
+                            <td width="247">
+                                <p align="center">0,00087 рад</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="123">
+                                <p align="center">y<sub>m</sub><sub>ах</sub>, см</p>
+                            </td>
+                            <td width="207">
+                                <p align="center">0,0001&hellip;0.0005 = y<sub>m</sub><sub>ах</sub>;</p>
+                                <p align="center">y<sub>max</sub>&nbsp;=( 0,01&hellip;0,03)m;</p>
+                                <p align="center">m &ndash; модуль в см</p>
+                            </td>
+                            <td width="247">
+                                <p align="center">0,0053 : 9,5 = 0,00056;</p>
+                                <p align="center">y<sub>max</sub>&nbsp;= 0,03 &middot; 0,25 = 0,0075;</p>
+                                <p align="center">фактически 0,0053</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p align="justify"><strong>Примечание.</strong>&nbsp;В отношении жесткости вала диаметр d = 30мм допустим. Для соз&shy;дания лучших условий работы подшипников и зубчатых колес следует принять d = 32мм.</p>
+        </div>
+        <h2 id="p2">12. Сравнение сплошных и полых валов различного сечения по наружному диаметру (d, d1), моменту инерции (J, J1), моменту сопротивления (W, W1) и массе</h2>
+        <p align="center">(площади поперечного сечения F, F<sub>1</sub>)</p>
+        <p align="center"><img src="img/ExampleOfCalcOfTheShaft/32.jpg" alt="рисунок" width="284px" height="143px" align="middle" border="0px" hspace="0" vspace="0" /></p>
+        <p align="justify">J<sub>1</sub>/J и W<sub>1</sub>/W &ndash; относительные значения моментов инерции и моментов сопротивления сечении полых валов как при изгибе, так и при круче&shy;нии</p>
+        <div style="overflow-x: auto;">
+            <table border="1" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" width="66">
+                            <p align="center">d<sub>2</sub>/d<sub>1</sub></p>
+                        </td>
+                        <td colspan="2" width="143">
+                            <p align="center">При одинаковом наружном диаметре валов</p>
+                        </td>
+                        <td colspan="3" width="195">
+                            <p align="center">При одинаковой массе валов или при одинаковой площади сечения F=F<sub>1</sub></p>
+                        </td>
+                        <td colspan="2" width="144">
+                            <p align="center">При одинаковой прочности валов W<sub>1&nbsp;</sub>= W</p>
+                        </td>
+                        <td colspan="3" width="196">
+                            <p align="center">При одинаковой жесткости валов J<sub>1</sub>&nbsp;= J</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="65">
+                            <p align="center">J<sub>1</sub>/J = W<sub>1</sub>/W</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">Уменьшение массы, %</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">d<sub>1</sub>/d</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">J<sub>1</sub>/J</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">W<sub>1</sub>/W</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">d<sub>1</sub>/d = J<sub>1</sub>/J</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">Уменьшение массы, %</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">d<sub>1</sub>/d</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">W<sub>1</sub>/W</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">Уменьшение массы, %</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,1</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,000</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">1</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,01</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,020</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,015</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,000</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">1</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,00</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,000</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,2</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,998</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">4</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,02</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,083</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,061</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,001</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">4</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,00</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,000</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">4</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,3</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,992</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">9</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,05</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,198</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,142</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,003</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">9</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,00</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,998</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">9</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,4</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,974</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">16</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,09</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,381</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,265</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,009</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">14</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,01</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,994</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">15</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,5</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,938</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">25</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,15</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,667</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,443</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,021</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">22</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,02</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,984</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">23</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,6</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,870</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">36</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,25</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">2ДЗ</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">1,70</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,047</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">30</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,04</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,966</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">31</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,7</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,760</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">49</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,40</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">2,92</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">2,09</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,097</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">39</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,07</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,934</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">41</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,8</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,590</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">64</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,67</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">4,56</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">2,73</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,192</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">49</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1Д4</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,877</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">53</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="66">
+                            <p align="center">0,9</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,344</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">81</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">2,29</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">9,53</p>
+                        </td>
+                        <td width="64">
+                            <p align="center">4,15</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">1,427</p>
+                        </td>
+                        <td width="78">
+                            <p align="center">63</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">1,31</p>
+                        </td>
+                        <td width="65">
+                            <p align="center">0,766</p>
+                        </td>
+                        <td width="66">
+                            <p align="center">68</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+

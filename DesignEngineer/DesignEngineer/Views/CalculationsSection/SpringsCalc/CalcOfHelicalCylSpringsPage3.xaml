@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="DesignEngineer.Views.CalculationsSection.SpringsCalc.CalcOfHelicalCylSpringsPage3"
+             Title="{Binding Title}"
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:ArticleViewModel/>
+    </ContentPage.BindingContext>
+    <!-- -->
+    <StackLayout>
+        <WebView Source="{Binding WebViewSource}" HeightRequest="1000"
+                 WidthRequest="1000" 
+                 androidSpecific:WebView.EnableZoomControls="true"
+                 androidSpecific:WebView.DisplayZoomControls="True"/>
+    </StackLayout>
+</ContentPage>

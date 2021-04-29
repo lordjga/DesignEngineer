@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rackCalc="clr-namespace:DesignEngineer.Views.CalculationsSection.RackCalc;assembly=DesignEngineer"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.CalculationsSection.RackCalc.CalcRackPage"
+             Title ="Расчет реек"
+             Style="{DynamicResource TabbedPageStyle}">
+    
+    <TabbedPage.BindingContext>
+        <viewModels:RackCalcViewModel/>
+    </TabbedPage.BindingContext>
+    <TabbedPage.Resources>
+        <ResourceDictionary/>
+    </TabbedPage.Resources>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="Item1" Order="Primary"  IconImageSource="{DynamicResource IconImageSourceBookmark}" Priority="0" 
+                     Command="{Binding AddBookmark}"/>
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <rackCalc:CalcRackPage1 >
+        </rackCalc:CalcRackPage1 >
+        <rackCalc:CalcRackPage2 >
+        </rackCalc:CalcRackPage2 >
+        <rackCalc:CalcRackPage3 >
+        </rackCalc:CalcRackPage3>
+    </TabbedPage.Children>
+
+</TabbedPage>

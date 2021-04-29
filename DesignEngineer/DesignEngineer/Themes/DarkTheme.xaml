@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="ThemingDemo.DarkTheme">
+    <Color x:Key="PageBackgroundColor">#6C5A5A</Color>
+    <Color x:Key="NavigationBarColor">MidnightBlue</Color>
+    <Color x:Key="PrimaryTextColor">WhiteSmoke</Color>
+    <Color x:Key="SecondaryTextColor">Cornsilk</Color>
+    <Color x:Key="SelTabColor">#4E5754</Color>
+    <Color x:Key="TertiaryTextColor">WhiteSmoke</Color>
+    <Color x:Key="TransparentColor">#33F7ABAB</Color>
+    <ImageSource x:Key="ImageSourceBackg">BackgroundsDark.jfif</ImageSource>
+    <ImageSource x:Key="IconImageSourceSearch">SearchIconWhite.png</ImageSource>
+    <ImageSource x:Key="IconImageSourceBookmark">IconBrosWhite.png</ImageSource>
+</ResourceDictionary>
+
+

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels"
+             xmlns:styling="clr-namespace:DesignEngineer;assembly=DesignEngineer"
+             x:Class="DesignEngineer.MainPage"
+             Title ="Справочник конструктора" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+<ContentPage.Resources>
+        <ResourceDictionary/>
+</ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+            <Grid x:Name="Grid" >
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Общее" Style="{DynamicResource PrimaryLabel}"/>
+            <Button  x:Name="BGenTechServ" Grid.Row="1" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="GenTechServ"
+                     Text="Общетехнические сведения"/>
+            <Button  x:Name="BCalculations" Grid.Row="1" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Calculations"
+                     Text="Расчеты"/>
+            <Button  x:Name="BSurfaceRoughness" Grid.Row="1" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="SurfaceRoughness"
+                     Text="Шер-ть поверхности"/>
+            <Button  Grid.Row="2" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Допуски и посадки"/>
+            <Button  Grid.Row="2" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Конструктивные элементы"/>
+            <Button  Grid.Row="2" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="AxlesAndShafts"
+                     Text="Оси и валы"/>
+            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Соединения" Style="{DynamicResource PrimaryLabel}"/>
+            <Button   Grid.Row="4" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Крепежные изделия"/>
+            <Button  Grid.Row="4" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Станд. и норм. детали и узлы"/>
+            <Button   Grid.Row="4" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Подшипники"/>
+            <Button   Grid.Row="5" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Неразъемные"/>
+            <Button   Grid.Row="5" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Разъемные"/>
+            <Button   Grid.Row="5" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Пружины"/>
+            <Button   Grid.Row="6" Grid.Column="0" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Трубопроводная арматура"/>
+            <Button   Grid.Row="6" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Трубопроводы и соединения"/>
+            <Button   Grid.Row="6" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Уплотнительные устройства"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Материалы" Style="{DynamicResource PrimaryLabel}"/>
+            <Button   Grid.Row="8" Grid.Column="0" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Стали" />
+            <Button   Grid.Row="8" Grid.Column="1" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Чугуны"/>
+            <Button   Grid.Row="8" Grid.Column="2" 
+                     ImageSource=""
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Цвет. мет. и сплавы"/>
+            <Button   Grid.Row="9" Grid.Column="0" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Неметаллы" />
+            <Button   Grid.Row="9" Grid.Column="1" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Покрытия" />
+            <Button   Grid.Row="9" Grid.Column="2" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Смазочные материалы" />
+
+            <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Передачи" Style="{DynamicResource PrimaryLabel}"/>
+            <Button  Grid.Row="11" Grid.Column="0" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Винтовые пеередачи и храповое зацепление" />
+            <Button  Grid.Row="11" Grid.Column="1" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Зубчатые и червячные" />
+            <Button  Grid.Row="11" Grid.Column="2" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Муфты" />
+            <Button  Grid.Row="12" Grid.Column="0" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Ременные" />
+            <Button  Grid.Row="12" Grid.Column="1" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Цепные" />
+            <Button  Grid.Row="12" Grid.Column="2" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Шариковые винтовые" />
+
+            <Label Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Text="Устройства и приборы" Style="{DynamicResource PrimaryLabel}"/>
+            <Button   Grid.Row="14" Grid.Column="0" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Гидравлика и пневматика" />
+            <Button  Grid.Row="14" Grid.Column="1" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Встраиваемые в оборудование" />
+            <Button  Grid.Row="14" Grid.Column="2" 
+                     ImageSource="" 
+                     Command="{Binding BToPagesOnClicked}" CommandParameter="Alarm"
+                     Text="Электродвигатели" />
+            </Grid>
+        </ScrollView>
+</ContentPage>

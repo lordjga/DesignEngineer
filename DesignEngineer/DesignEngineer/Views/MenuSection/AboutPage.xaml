@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DesignEngineer.ViewModels;assembly=DesignEngineer"
+             x:Class="DesignEngineer.Views.MenuSection.AboutPage"
+             Title ="О приложении" 
+             Style="{DynamicResource ContentPageStyle}">
+    <ContentPage.BindingContext>
+        <viewModels:XamlCommands/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary/>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Order="Primary"  IconImageSource="{DynamicResource IconImageSourceSearch}" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Поиск" Priority="0" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Search"/>
+        <ToolbarItem  Order="Secondary"  Text="Настройки" Priority="1" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Settings"/>
+        <ToolbarItem  Order="Secondary"  Text="Закладки" Priority="2" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Bookmark"/>
+        <ToolbarItem  Order="Secondary"  Text="Отчеты" Priority="3" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="Report"/>
+        <ToolbarItem  Order="Secondary"  Text="О программе" Priority="4" 
+                      Command="{Binding BToPagesOnClicked}" CommandParameter="About"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Label Text="Министерство образования Республики Беларусь" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+        <Label Text="Учреждение образования «Белорусский государственный университет информатики и радиоэлектроники»" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+        <Label Text="Институт информационных технологий" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+        <Label Text="Кафедра «Микропроцессорные системы и сети»" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+        <Label Text="ДИПЛОМНЫЙ ПРОЕКТ" 
+               Style="{DynamicResource PrimaryLabel}"/>
+        <Label Text="Сервисное мобильное приложение для автономной работы инженера-конструктора &amp;" 
+               Style="{DynamicResource PrimaryLabel}"/>
+        <Label Text="Дипломник: А.А. Лаферчук &amp;
+               Руководитель: Н.В. Лапицкая&amp;&amp;" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+        <Label Text="МИНСК 2021&amp;" 
+               Style="{DynamicResource PrimaryLabel}" FontSize="Body"/>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,143 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UsersConfig.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UsersConfig.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.30" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Themes\DarkTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\LightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AxlesAndShafts\AxlesAndShaftsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\AngleCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\AreaCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\EnergyCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\MassCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\PowerCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\PressureCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\SpeedCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\TemperatureCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\ConverterCalcs\VolumeCalc.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\PageCalculations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CalculationsSection\SpringsCalc\CalcOfHelicalCylSpringsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\RegistrPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\ReportView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuSection\BookmarkPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SurfaceRoughnessSection\PageSurfaceRoughness.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CalculationsSection\ConverterCalcs\LengthCalc.xaml.cs">
+      <DependentUpon>LengthCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\RackCalc\CalcRackPage.xaml.cs">
+      <DependentUpon>CalcRackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\RackCalc\CalcRackPage1.xaml.cs">
+      <DependentUpon>CalcRackPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\RackCalc\CalcRackPage2.xaml.cs">
+      <DependentUpon>CalcRackPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\RackCalc\CalcRackPage3.xaml.cs">
+      <DependentUpon>CalcRackPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\SpringsCalc\CalcOfHelicalCylSpringsPage3.xaml.cs">
+      <DependentUpon>CalcOfHelicalCylSpringsPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\SpringsCalc\CalcOfHelicalCylSpringsPage2.xaml.cs">
+      <DependentUpon>CalcOfHelicalCylSpringsPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CalculationsSection\SpringsCalc\CalcOfHelicalCylSpringsPage1.xaml.cs">
+      <DependentUpon>CalcOfHelicalCylSpringsPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MenuSection\ReportPage.xaml.cs">
+      <DependentUpon>ReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MenuSection\BookmarkPage.xaml.cs">
+      <DependentUpon>BookmarkPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\MaterialsSection\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\..\..\..\..\Microsoft\Xamarin\NuGet\xamarin.forms\4.8.0.1451\lib\MonoAndroid10.0\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
